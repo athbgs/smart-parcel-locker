@@ -1,0 +1,65 @@
+HASIL UJI PROGRAM SMART LOCKER
+Waktu mulai: 2026-10-19T22:59:27.788436+07:00
+Sumber: WI1102_ProjekI_31_12.py
+SHA-256: bc986a4a9cf8564d3b2ed7a305c99e4854f5eb2dd9b54e5a72a665ccf521cb21
+
+Skenario perilaku: 44/44 lulus.
+Geometri dan okupansi: 262144 pemeriksaan; 0 ketidaksesuaian.
+Pemeriksaan terdiri atas 4.096 kombinasi ukuran x 64 pola terisi/kosong.
+Dua belas skenario menguji enam rotasi B dan enam rotasi A.
+Delapan regresi baru memeriksa batas input, pengulangan dimensi, dan nol di depan.
+Nilai 61 dalam pemeriksaan blok geometri adalah kasus negatif, bukan input CLI yang diterima.
+Seluruh skenario juga memeriksa data loker kosong dan keunikan kode aktif.
+Kesesuaian sintaks dasar: LULUS
+
+01. PASS | initial_status | Enam loker awal kosong; jumlah setiap tipe sesuai inventori.
+02. PASS | retrieve_empty | Ambil saat semua loker kosong kembali ke menu tanpa meminta kode.
+03. PASS | exact_fit_D | Paket tepat batas dimensi tipe D tersimpan di loker yang benar.
+04. PASS | exact_fit_C | Paket tepat batas dimensi tipe C tersimpan di loker yang benar.
+05. PASS | exact_fit_B | Paket tepat batas dimensi tipe B tersimpan di loker yang benar.
+06. PASS | exact_fit_A | Paket tepat batas dimensi tipe A tersimpan di loker yang benar.
+07. PASS | oversize | Setiap sisi 60 cm valid, tetapi paket 60 x 60 x 60 tidak muat; data tetap kosong.
+08. PASS | invalid_dimensions | Kosong, teks, negatif, nol, pecahan, spasi, notasi eksponen, dan angka non-ASCII ditolak.
+09. PASS | overlong_dimension | Nilai 10000 dan 5.000 digit sembilan ditolak dengan aman; input berikutnya berhasil.
+10. PASS | blank_metadata | Nama dan telepon kosong, hanya spasi, atau hanya tab wajib diisi ulang.
+11. PASS | cancel_deposit | Pembatalan pembayaran tidak memakai slot atau menghabiskan kode.
+12. PASS | invalid_payment | Pilihan pembayaran tidak valid diulang hingga y/t.
+13. PASS | retrieve_success | Pengambilan benar mereset status, nama, telepon, dan kode.
+14. PASS | wrong_code | Kode salah tidak mengubah data dan kembali ke menu; tidak ada loop tak berujung.
+15. PASS | cancel_retrieval | Pembatalan pengambilan mempertahankan seluruh data paket.
+16. PASS | invalid_retrieval_confirmation | Konfirmasi pengambilan diulang ketika pilihan bukan y/t.
+17. PASS | stale_code | Kode yang sudah dipakai ditolak saat paket lain masih tersimpan.
+18. PASS | reuse_slot | Loker bekas digunakan kembali dengan kode baru; kode lama tetap tidak berlaku.
+19. PASS | capacity_six | Enam titip mengisi enam slot unik; paket ketujuh ditolak ketika penuh.
+20. PASS | fallback_after_D_full | Ketika dua D penuh, paket kecil beralih ke C yang kosong.
+21. PASS | B_A_tie_and_fallback | Paket yang muat B/A memilih B lebih dahulu lalu A ketika B penuh.
+22. PASS | invalid_menu | Menu tidak valid diulang dan pilihan keluar menghentikan program.
+23. PASS | mixed_status | Status dan hitungan setiap tipe konsisten setelah titip dan ambil campuran.
+24. PASS | independent_packages | Mengambil paket kedua tidak mengubah data paket pertama.
+25. PASS | rotation_B_1 | Rotasi (30, 40, 45) tetap memilih tipe B.
+26. PASS | rotation_B_2 | Rotasi (30, 45, 40) tetap memilih tipe B.
+27. PASS | rotation_B_3 | Rotasi (40, 30, 45) tetap memilih tipe B.
+28. PASS | rotation_B_4 | Rotasi (40, 45, 30) tetap memilih tipe B.
+29. PASS | rotation_B_5 | Rotasi (45, 30, 40) tetap memilih tipe B.
+30. PASS | rotation_B_6 | Rotasi (45, 40, 30) tetap memilih tipe B.
+31. PASS | rotation_A_1 | Rotasi (20, 60, 45) tetap memilih tipe A.
+32. PASS | rotation_A_2 | Rotasi (20, 45, 60) tetap memilih tipe A.
+33. PASS | rotation_A_3 | Rotasi (60, 20, 45) tetap memilih tipe A.
+34. PASS | rotation_A_4 | Rotasi (60, 45, 20) tetap memilih tipe A.
+35. PASS | rotation_A_5 | Rotasi (45, 20, 60) tetap memilih tipe A.
+36. PASS | rotation_A_6 | Rotasi (45, 60, 20) tetap memilih tipe A.
+37. PASS | dimension_prompts_match_inventory | Ketiga prompt menyebut 1-60 cm dan paket 60 x 45 x 20 tetap masuk A lewat rotasi.
+38. PASS | over_limit_61_panjang | Panjang 61 cm ditolak dan diulang pada dimensi yang sama; batal tidak mengubah data.
+39. PASS | over_limit_61_lebar | Lebar 61 cm ditolak dan diulang pada dimensi yang sama; batal tidak mengubah data.
+40. PASS | over_limit_61_tinggi | Tinggi 61 cm ditolak dan diulang pada dimensi yang sama; batal tidak mengubah data.
+41. PASS | over_limit_9999 | Batas lama 9999 ditolak langsung pada input panjang; tidak ada transaksi tersimpan.
+42. PASS | leading_zero_rotated_60 | Nol di depan tidak mengubah nilai; 00060 tetap valid dan rotasi memilih A.
+43. PASS | long_leading_zero_60 | 5.000 karakter dengan nol di depan dan nilai 60 diterima tanpa konversi string panjang.
+44. PASS | zero_only_dimension | 5.000 angka nol tetap bernilai nol dan ditolak; batas bawah 1 cm diterima.
+
+BATASAN
+Automated tests use scripted terminal input; not a user usability study.
+Geometry models rectangular boxes with six axis-aligned rotations.
+Inventory, dimensions, and counts are simulation assumptions.
+No physical door, sensor, payment, notification, or persistence was tested.
+Code uniqueness is guaranteed within one session; restarting resets data.
