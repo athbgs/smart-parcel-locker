@@ -1,0 +1,10 @@
+# Local Python and operating-system files
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
+.venv/
+venv/
+.env
+.env.*
+!.env.example
