@@ -1,0 +1,2467 @@
+{
+  "source": "WI1102_ProjekI_31_12.py",
+  "sha256": "bc986a4a9cf8564d3b2ed7a305c99e4854f5eb2dd9b54e5a72a665ccf521cb21",
+  "test_sha256": "2315b445fc9303dde0f6fcbb39006c2ead8259b3ba8f6b725d51e11f8ff8e34b",
+  "started_at": "2026-10-19T22:59:27.788436+07:00",
+  "finished_at": "2026-10-19T22:59:29.150170+07:00",
+  "behavioral_scenarios": 44,
+  "behavioral_passed": 44,
+  "geometry_dimension_triples": 4096,
+  "occupancy_patterns_per_triple": 64,
+  "geometry_occupancy_checks": 262144,
+  "geometry_failures": [],
+  "course_syntax": {
+    "allowed_calls_only": true,
+    "actual_calls": [
+      "input",
+      "int",
+      "print",
+      "range",
+      "str"
+    ],
+    "forbidden_constructs": [],
+    "max_line_width": 80,
+    "source_lines": 194,
+    "list_literals": 13,
+    "for_loops": 9,
+    "while_loops": 5
+  },
+  "all_passed": true,
+  "scenarios": [
+    {
+      "name": "initial_status",
+      "result": "PASS",
+      "purpose": "Enam loker awal kosong; jumlah setiap tipe sesuai inventori.",
+      "elapsed_seconds": 7.3e-05,
+      "inputs": [
+        "3",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 3\n\nKETERSEDIAAN LOKER\nID | Tipe | H x V x D (cm) | Status\nL01 | D | 30 x 20 x 45 | Kosong\nL02 | D | 30 x 20 x 45 | Kosong\nL03 | C | 30 x 30 x 45 | Kosong\nL04 | C | 30 x 30 x 45 | Kosong\nL05 | B | 30 x 40 x 45 | Kosong\nL06 | A | 20 x 60 x 45 | Kosong\nTotal kosong: 6\nTotal terisi: 0\nKosong D: 2 | C: 2 | B: 1 | A: 1\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong"
+        ],
+        "nama": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "telepon": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "kode": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "nomor_kode": 1001
+      }
+    },
+    {
+      "name": "retrieve_empty",
+      "result": "PASS",
+      "purpose": "Ambil saat semua loker kosong kembali ke menu tanpa meminta kode.",
+      "elapsed_seconds": 2.4e-05,
+      "inputs": [
+        "2",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 2\nTidak ada paket tersimpan.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong"
+        ],
+        "nama": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "telepon": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "kode": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "nomor_kode": 1001
+      }
+    },
+    {
+      "name": "exact_fit_D",
+      "result": "PASS",
+      "purpose": "Paket tepat batas dimensi tipe D tersimpan di loker yang benar.",
+      "elapsed_seconds": 4e-05,
+      "inputs": [
+        "1",
+        "30",
+        "20",
+        "45",
+        "Ana",
+        "081234",
+        "y",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 30\nLebar paket (bulat 1-60 cm): 20\nTinggi paket (bulat 1-60 cm): 45\nLoker terpilih: L01 | Tipe: D\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L01.\nNotifikasi simulasi: kode ambil P1001\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Terisi",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong"
+        ],
+        "nama": [
+          "Ana",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "telepon": [
+          "081234",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "kode": [
+          "P1001",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "nomor_kode": 1002
+      }
+    },
+    {
+      "name": "exact_fit_C",
+      "result": "PASS",
+      "purpose": "Paket tepat batas dimensi tipe C tersimpan di loker yang benar.",
+      "elapsed_seconds": 3.1e-05,
+      "inputs": [
+        "1",
+        "30",
+        "30",
+        "45",
+        "Ana",
+        "081234",
+        "y",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 30\nLebar paket (bulat 1-60 cm): 30\nTinggi paket (bulat 1-60 cm): 45\nLoker terpilih: L03 | Tipe: C\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L03.\nNotifikasi simulasi: kode ambil P1001\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Kosong",
+          "Kosong",
+          "Terisi",
+          "Kosong",
+          "Kosong",
+          "Kosong"
+        ],
+        "nama": [
+          "",
+          "",
+          "Ana",
+          "",
+          "",
+          ""
+        ],
+        "telepon": [
+          "",
+          "",
+          "081234",
+          "",
+          "",
+          ""
+        ],
+        "kode": [
+          "",
+          "",
+          "P1001",
+          "",
+          "",
+          ""
+        ],
+        "nomor_kode": 1002
+      }
+    },
+    {
+      "name": "exact_fit_B",
+      "result": "PASS",
+      "purpose": "Paket tepat batas dimensi tipe B tersimpan di loker yang benar.",
+      "elapsed_seconds": 2.7e-05,
+      "inputs": [
+        "1",
+        "30",
+        "40",
+        "45",
+        "Ana",
+        "081234",
+        "y",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 30\nLebar paket (bulat 1-60 cm): 40\nTinggi paket (bulat 1-60 cm): 45\nLoker terpilih: L05 | Tipe: B\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L05.\nNotifikasi simulasi: kode ambil P1001\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Terisi",
+          "Kosong"
+        ],
+        "nama": [
+          "",
+          "",
+          "",
+          "",
+          "Ana",
+          ""
+        ],
+        "telepon": [
+          "",
+          "",
+          "",
+          "",
+          "081234",
+          ""
+        ],
+        "kode": [
+          "",
+          "",
+          "",
+          "",
+          "P1001",
+          ""
+        ],
+        "nomor_kode": 1002
+      }
+    },
+    {
+      "name": "exact_fit_A",
+      "result": "PASS",
+      "purpose": "Paket tepat batas dimensi tipe A tersimpan di loker yang benar.",
+      "elapsed_seconds": 2.5e-05,
+      "inputs": [
+        "1",
+        "20",
+        "60",
+        "45",
+        "Ana",
+        "081234",
+        "y",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 20\nLebar paket (bulat 1-60 cm): 60\nTinggi paket (bulat 1-60 cm): 45\nLoker terpilih: L06 | Tipe: A\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L06.\nNotifikasi simulasi: kode ambil P1001\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Terisi"
+        ],
+        "nama": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "Ana"
+        ],
+        "telepon": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "081234"
+        ],
+        "kode": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "P1001"
+        ],
+        "nomor_kode": 1002
+      }
+    },
+    {
+      "name": "oversize",
+      "result": "PASS",
+      "purpose": "Setiap sisi 60 cm valid, tetapi paket 60 x 60 x 60 tidak muat; data tetap kosong.",
+      "elapsed_seconds": 2.1e-05,
+      "inputs": [
+        "1",
+        "60",
+        "60",
+        "60",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 60\nLebar paket (bulat 1-60 cm): 60\nTinggi paket (bulat 1-60 cm): 60\nTidak ada loker kosong yang cukup untuk paket.\nKembali ke menu utama; tidak ada antrean dalam simulasi.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong"
+        ],
+        "nama": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "telepon": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "kode": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "nomor_kode": 1001
+      }
+    },
+    {
+      "name": "invalid_dimensions",
+      "result": "PASS",
+      "purpose": "Kosong, teks, negatif, nol, pecahan, spasi, notasi eksponen, dan angka non-ASCII ditolak.",
+      "elapsed_seconds": 8.8e-05,
+      "inputs": [
+        "1",
+        "",
+        "abc",
+        "-1",
+        "0",
+        "1.5",
+        " 20",
+        "1e2",
+        "nan",
+        "\uff11\uff12",
+        "20",
+        "0",
+        "20",
+        "-2",
+        "20",
+        "Ana",
+        "081234",
+        "y",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): \nUkuran harus bilangan bulat 1-60 cm.\nPanjang paket (bulat 1-60 cm): abc\nUkuran harus bilangan bulat 1-60 cm.\nPanjang paket (bulat 1-60 cm): -1\nUkuran harus bilangan bulat 1-60 cm.\nPanjang paket (bulat 1-60 cm): 0\nUkuran harus bilangan bulat 1-60 cm.\nPanjang paket (bulat 1-60 cm): 1.5\nUkuran harus bilangan bulat 1-60 cm.\nPanjang paket (bulat 1-60 cm):  20\nUkuran harus bilangan bulat 1-60 cm.\nPanjang paket (bulat 1-60 cm): 1e2\nUkuran harus bilangan bulat 1-60 cm.\nPanjang paket (bulat 1-60 cm): nan\nUkuran harus bilangan bulat 1-60 cm.\nPanjang paket (bulat 1-60 cm): \uff11\uff12\nUkuran harus bilangan bulat 1-60 cm.\nPanjang paket (bulat 1-60 cm): 20\nLebar paket (bulat 1-60 cm): 0\nUkuran harus bilangan bulat 1-60 cm.\nLebar paket (bulat 1-60 cm): 20\nTinggi paket (bulat 1-60 cm): -2\nUkuran harus bilangan bulat 1-60 cm.\nTinggi paket (bulat 1-60 cm): 20\nLoker terpilih: L01 | Tipe: D\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L01.\nNotifikasi simulasi: kode ambil P1001\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Terisi",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong"
+        ],
+        "nama": [
+          "Ana",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "telepon": [
+          "081234",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "kode": [
+          "P1001",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "nomor_kode": 1002
+      }
+    },
+    {
+      "name": "overlong_dimension",
+      "result": "PASS",
+      "purpose": "Nilai 10000 dan 5.000 digit sembilan ditolak dengan aman; input berikutnya berhasil.",
+      "elapsed_seconds": 0.000217,
+      "inputs": [
+        "1",
+        "10000",
+        "99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999",
+        "20",
+        "20",
+        "20",
+        "Ana",
+        "081234",
+        "y",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 10000\nUkuran harus bilangan bulat 1-60 cm.\nPanjang paket (bulat 1-60 cm): 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999\nUkuran harus bilangan bulat 1-60 cm.\nPanjang paket (bulat 1-60 cm): 20\nLebar paket (bulat 1-60 cm): 20\nTinggi paket (bulat 1-60 cm): 20\nLoker terpilih: L01 | Tipe: D\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L01.\nNotifikasi simulasi: kode ambil P1001\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Terisi",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong"
+        ],
+        "nama": [
+          "Ana",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "telepon": [
+          "081234",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "kode": [
+          "P1001",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "nomor_kode": 1002
+      }
+    },
+    {
+      "name": "blank_metadata",
+      "result": "PASS",
+      "purpose": "Nama dan telepon kosong, hanya spasi, atau hanya tab wajib diisi ulang.",
+      "elapsed_seconds": 3.4e-05,
+      "inputs": [
+        "1",
+        "10",
+        "10",
+        "10",
+        "",
+        " ",
+        "\t",
+        "Ana",
+        "",
+        "  ",
+        "\t",
+        "081234",
+        "y",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 10\nLebar paket (bulat 1-60 cm): 10\nTinggi paket (bulat 1-60 cm): 10\nLoker terpilih: L01 | Tipe: D\nNama penerima: \nIsian tidak boleh kosong atau hanya spasi.\nNama penerima:  \nIsian tidak boleh kosong atau hanya spasi.\nNama penerima: \t\nIsian tidak boleh kosong atau hanya spasi.\nNama penerima: Ana\nTelepon penerima: \nIsian tidak boleh kosong atau hanya spasi.\nTelepon penerima:   \nIsian tidak boleh kosong atau hanya spasi.\nTelepon penerima: \t\nIsian tidak boleh kosong atau hanya spasi.\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L01.\nNotifikasi simulasi: kode ambil P1001\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Terisi",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong"
+        ],
+        "nama": [
+          "Ana",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "telepon": [
+          "081234",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "kode": [
+          "P1001",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "nomor_kode": 1002
+      }
+    },
+    {
+      "name": "cancel_deposit",
+      "result": "PASS",
+      "purpose": "Pembatalan pembayaran tidak memakai slot atau menghabiskan kode.",
+      "elapsed_seconds": 3.5e-05,
+      "inputs": [
+        "1",
+        "10",
+        "10",
+        "10",
+        "Ana",
+        "081234",
+        "t",
+        "1",
+        "10",
+        "10",
+        "10",
+        "Budi",
+        "081234",
+        "y",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 10\nLebar paket (bulat 1-60 cm): 10\nTinggi paket (bulat 1-60 cm): 10\nLoker terpilih: L01 | Tipe: D\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): t\nPenitipan dibatalkan. Data loker tidak berubah.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 10\nLebar paket (bulat 1-60 cm): 10\nTinggi paket (bulat 1-60 cm): 10\nLoker terpilih: L01 | Tipe: D\nNama penerima: Budi\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L01.\nNotifikasi simulasi: kode ambil P1001\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Terisi",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong"
+        ],
+        "nama": [
+          "Budi",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "telepon": [
+          "081234",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "kode": [
+          "P1001",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "nomor_kode": 1002
+      }
+    },
+    {
+      "name": "invalid_payment",
+      "result": "PASS",
+      "purpose": "Pilihan pembayaran tidak valid diulang hingga y/t.",
+      "elapsed_seconds": 2.5e-05,
+      "inputs": [
+        "1",
+        "10",
+        "10",
+        "10",
+        "Ana",
+        "081234",
+        "yes",
+        "",
+        "y",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 10\nLebar paket (bulat 1-60 cm): 10\nTinggi paket (bulat 1-60 cm): 10\nLoker terpilih: L01 | Tipe: D\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): yes\nJawaban harus y atau t.\nPembayaran simulasi berhasil? (y/t): \nJawaban harus y atau t.\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L01.\nNotifikasi simulasi: kode ambil P1001\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Terisi",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong"
+        ],
+        "nama": [
+          "Ana",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "telepon": [
+          "081234",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "kode": [
+          "P1001",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "nomor_kode": 1002
+      }
+    },
+    {
+      "name": "retrieve_success",
+      "result": "PASS",
+      "purpose": "Pengambilan benar mereset status, nama, telepon, dan kode.",
+      "elapsed_seconds": 2.9e-05,
+      "inputs": [
+        "1",
+        "10",
+        "10",
+        "10",
+        "Ana",
+        "081234",
+        "y",
+        "2",
+        "P1001",
+        "y",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 10\nLebar paket (bulat 1-60 cm): 10\nTinggi paket (bulat 1-60 cm): 10\nLoker terpilih: L01 | Tipe: D\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L01.\nNotifikasi simulasi: kode ambil P1001\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 2\nMasukkan kode ambil (contoh P1001): P1001\nKonfirmasi pengambilan paket? (y/t): y\nPaket diambil. L01 kosong.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong"
+        ],
+        "nama": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "telepon": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "kode": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "nomor_kode": 1002
+      }
+    },
+    {
+      "name": "wrong_code",
+      "result": "PASS",
+      "purpose": "Kode salah tidak mengubah data dan kembali ke menu; tidak ada loop tak berujung.",
+      "elapsed_seconds": 4.5e-05,
+      "inputs": [
+        "1",
+        "10",
+        "10",
+        "10",
+        "Ana",
+        "081234",
+        "y",
+        "2",
+        "SALAH",
+        "3",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 10\nLebar paket (bulat 1-60 cm): 10\nTinggi paket (bulat 1-60 cm): 10\nLoker terpilih: L01 | Tipe: D\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L01.\nNotifikasi simulasi: kode ambil P1001\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 2\nMasukkan kode ambil (contoh P1001): SALAH\nKode tidak ditemukan atau sudah digunakan.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 3\n\nKETERSEDIAAN LOKER\nID | Tipe | H x V x D (cm) | Status\nL01 | D | 30 x 20 x 45 | Terisi\nL02 | D | 30 x 20 x 45 | Kosong\nL03 | C | 30 x 30 x 45 | Kosong\nL04 | C | 30 x 30 x 45 | Kosong\nL05 | B | 30 x 40 x 45 | Kosong\nL06 | A | 20 x 60 x 45 | Kosong\nTotal kosong: 5\nTotal terisi: 1\nKosong D: 1 | C: 2 | B: 1 | A: 1\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Terisi",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong"
+        ],
+        "nama": [
+          "Ana",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "telepon": [
+          "081234",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "kode": [
+          "P1001",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "nomor_kode": 1002
+      }
+    },
+    {
+      "name": "cancel_retrieval",
+      "result": "PASS",
+      "purpose": "Pembatalan pengambilan mempertahankan seluruh data paket.",
+      "elapsed_seconds": 2.6e-05,
+      "inputs": [
+        "1",
+        "10",
+        "10",
+        "10",
+        "Ana",
+        "081234",
+        "y",
+        "2",
+        "P1001",
+        "t",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 10\nLebar paket (bulat 1-60 cm): 10\nTinggi paket (bulat 1-60 cm): 10\nLoker terpilih: L01 | Tipe: D\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L01.\nNotifikasi simulasi: kode ambil P1001\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 2\nMasukkan kode ambil (contoh P1001): P1001\nKonfirmasi pengambilan paket? (y/t): t\nPengambilan dibatalkan. Data tidak berubah.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Terisi",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong"
+        ],
+        "nama": [
+          "Ana",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "telepon": [
+          "081234",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "kode": [
+          "P1001",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "nomor_kode": 1002
+      }
+    },
+    {
+      "name": "invalid_retrieval_confirmation",
+      "result": "PASS",
+      "purpose": "Konfirmasi pengambilan diulang ketika pilihan bukan y/t.",
+      "elapsed_seconds": 2.7e-05,
+      "inputs": [
+        "1",
+        "10",
+        "10",
+        "10",
+        "Ana",
+        "081234",
+        "y",
+        "2",
+        "P1001",
+        "ya",
+        "y",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 10\nLebar paket (bulat 1-60 cm): 10\nTinggi paket (bulat 1-60 cm): 10\nLoker terpilih: L01 | Tipe: D\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L01.\nNotifikasi simulasi: kode ambil P1001\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 2\nMasukkan kode ambil (contoh P1001): P1001\nKonfirmasi pengambilan paket? (y/t): ya\nJawaban harus y atau t.\nKonfirmasi pengambilan paket? (y/t): y\nPaket diambil. L01 kosong.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong"
+        ],
+        "nama": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "telepon": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "kode": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "nomor_kode": 1002
+      }
+    },
+    {
+      "name": "stale_code",
+      "result": "PASS",
+      "purpose": "Kode yang sudah dipakai ditolak saat paket lain masih tersimpan.",
+      "elapsed_seconds": 4.2e-05,
+      "inputs": [
+        "1",
+        "10",
+        "10",
+        "10",
+        "Ana",
+        "081234",
+        "y",
+        "1",
+        "10",
+        "10",
+        "10",
+        "Budi",
+        "081234",
+        "y",
+        "2",
+        "P1001",
+        "y",
+        "2",
+        "P1001",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 10\nLebar paket (bulat 1-60 cm): 10\nTinggi paket (bulat 1-60 cm): 10\nLoker terpilih: L01 | Tipe: D\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L01.\nNotifikasi simulasi: kode ambil P1001\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 10\nLebar paket (bulat 1-60 cm): 10\nTinggi paket (bulat 1-60 cm): 10\nLoker terpilih: L02 | Tipe: D\nNama penerima: Budi\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L02.\nNotifikasi simulasi: kode ambil P1002\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 2\nMasukkan kode ambil (contoh P1001): P1001\nKonfirmasi pengambilan paket? (y/t): y\nPaket diambil. L01 kosong.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 2\nMasukkan kode ambil (contoh P1001): P1001\nKode tidak ditemukan atau sudah digunakan.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Kosong",
+          "Terisi",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong"
+        ],
+        "nama": [
+          "",
+          "Budi",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "telepon": [
+          "",
+          "081234",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "kode": [
+          "",
+          "P1002",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "nomor_kode": 1003
+      }
+    },
+    {
+      "name": "reuse_slot",
+      "result": "PASS",
+      "purpose": "Loker bekas digunakan kembali dengan kode baru; kode lama tetap tidak berlaku.",
+      "elapsed_seconds": 4.1e-05,
+      "inputs": [
+        "1",
+        "10",
+        "10",
+        "10",
+        "Ana",
+        "081234",
+        "y",
+        "2",
+        "P1001",
+        "y",
+        "1",
+        "10",
+        "10",
+        "10",
+        "Citra",
+        "081234",
+        "y",
+        "2",
+        "P1001",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 10\nLebar paket (bulat 1-60 cm): 10\nTinggi paket (bulat 1-60 cm): 10\nLoker terpilih: L01 | Tipe: D\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L01.\nNotifikasi simulasi: kode ambil P1001\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 2\nMasukkan kode ambil (contoh P1001): P1001\nKonfirmasi pengambilan paket? (y/t): y\nPaket diambil. L01 kosong.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 10\nLebar paket (bulat 1-60 cm): 10\nTinggi paket (bulat 1-60 cm): 10\nLoker terpilih: L01 | Tipe: D\nNama penerima: Citra\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L01.\nNotifikasi simulasi: kode ambil P1002\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 2\nMasukkan kode ambil (contoh P1001): P1001\nKode tidak ditemukan atau sudah digunakan.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Terisi",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong"
+        ],
+        "nama": [
+          "Citra",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "telepon": [
+          "081234",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "kode": [
+          "P1002",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "nomor_kode": 1003
+      }
+    },
+    {
+      "name": "capacity_six",
+      "result": "PASS",
+      "purpose": "Enam titip mengisi enam slot unik; paket ketujuh ditolak ketika penuh.",
+      "elapsed_seconds": 0.000112,
+      "inputs": [
+        "1",
+        "10",
+        "10",
+        "10",
+        "Penerima 0",
+        "081234",
+        "y",
+        "1",
+        "10",
+        "10",
+        "10",
+        "Penerima 1",
+        "081234",
+        "y",
+        "1",
+        "10",
+        "10",
+        "10",
+        "Penerima 2",
+        "081234",
+        "y",
+        "1",
+        "10",
+        "10",
+        "10",
+        "Penerima 3",
+        "081234",
+        "y",
+        "1",
+        "10",
+        "10",
+        "10",
+        "Penerima 4",
+        "081234",
+        "y",
+        "1",
+        "10",
+        "10",
+        "10",
+        "Penerima 5",
+        "081234",
+        "y",
+        "1",
+        "10",
+        "10",
+        "10",
+        "3",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 10\nLebar paket (bulat 1-60 cm): 10\nTinggi paket (bulat 1-60 cm): 10\nLoker terpilih: L01 | Tipe: D\nNama penerima: Penerima 0\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L01.\nNotifikasi simulasi: kode ambil P1001\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 10\nLebar paket (bulat 1-60 cm): 10\nTinggi paket (bulat 1-60 cm): 10\nLoker terpilih: L02 | Tipe: D\nNama penerima: Penerima 1\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L02.\nNotifikasi simulasi: kode ambil P1002\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 10\nLebar paket (bulat 1-60 cm): 10\nTinggi paket (bulat 1-60 cm): 10\nLoker terpilih: L03 | Tipe: C\nNama penerima: Penerima 2\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L03.\nNotifikasi simulasi: kode ambil P1003\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 10\nLebar paket (bulat 1-60 cm): 10\nTinggi paket (bulat 1-60 cm): 10\nLoker terpilih: L04 | Tipe: C\nNama penerima: Penerima 3\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L04.\nNotifikasi simulasi: kode ambil P1004\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 10\nLebar paket (bulat 1-60 cm): 10\nTinggi paket (bulat 1-60 cm): 10\nLoker terpilih: L05 | Tipe: B\nNama penerima: Penerima 4\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L05.\nNotifikasi simulasi: kode ambil P1005\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 10\nLebar paket (bulat 1-60 cm): 10\nTinggi paket (bulat 1-60 cm): 10\nLoker terpilih: L06 | Tipe: A\nNama penerima: Penerima 5\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L06.\nNotifikasi simulasi: kode ambil P1006\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 10\nLebar paket (bulat 1-60 cm): 10\nTinggi paket (bulat 1-60 cm): 10\nTidak ada loker kosong yang cukup untuk paket.\nKembali ke menu utama; tidak ada antrean dalam simulasi.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 3\n\nKETERSEDIAAN LOKER\nID | Tipe | H x V x D (cm) | Status\nL01 | D | 30 x 20 x 45 | Terisi\nL02 | D | 30 x 20 x 45 | Terisi\nL03 | C | 30 x 30 x 45 | Terisi\nL04 | C | 30 x 30 x 45 | Terisi\nL05 | B | 30 x 40 x 45 | Terisi\nL06 | A | 20 x 60 x 45 | Terisi\nTotal kosong: 0\nTotal terisi: 6\nKosong D: 0 | C: 0 | B: 0 | A: 0\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Terisi",
+          "Terisi",
+          "Terisi",
+          "Terisi",
+          "Terisi",
+          "Terisi"
+        ],
+        "nama": [
+          "Penerima 0",
+          "Penerima 1",
+          "Penerima 2",
+          "Penerima 3",
+          "Penerima 4",
+          "Penerima 5"
+        ],
+        "telepon": [
+          "081234",
+          "081234",
+          "081234",
+          "081234",
+          "081234",
+          "081234"
+        ],
+        "kode": [
+          "P1001",
+          "P1002",
+          "P1003",
+          "P1004",
+          "P1005",
+          "P1006"
+        ],
+        "nomor_kode": 1007
+      }
+    },
+    {
+      "name": "fallback_after_D_full",
+      "result": "PASS",
+      "purpose": "Ketika dua D penuh, paket kecil beralih ke C yang kosong.",
+      "elapsed_seconds": 4.5e-05,
+      "inputs": [
+        "1",
+        "10",
+        "10",
+        "10",
+        "Ana",
+        "081234",
+        "y",
+        "1",
+        "10",
+        "10",
+        "10",
+        "Ana",
+        "081234",
+        "y",
+        "1",
+        "10",
+        "10",
+        "10",
+        "Ana",
+        "081234",
+        "y",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 10\nLebar paket (bulat 1-60 cm): 10\nTinggi paket (bulat 1-60 cm): 10\nLoker terpilih: L01 | Tipe: D\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L01.\nNotifikasi simulasi: kode ambil P1001\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 10\nLebar paket (bulat 1-60 cm): 10\nTinggi paket (bulat 1-60 cm): 10\nLoker terpilih: L02 | Tipe: D\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L02.\nNotifikasi simulasi: kode ambil P1002\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 10\nLebar paket (bulat 1-60 cm): 10\nTinggi paket (bulat 1-60 cm): 10\nLoker terpilih: L03 | Tipe: C\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L03.\nNotifikasi simulasi: kode ambil P1003\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Terisi",
+          "Terisi",
+          "Terisi",
+          "Kosong",
+          "Kosong",
+          "Kosong"
+        ],
+        "nama": [
+          "Ana",
+          "Ana",
+          "Ana",
+          "",
+          "",
+          ""
+        ],
+        "telepon": [
+          "081234",
+          "081234",
+          "081234",
+          "",
+          "",
+          ""
+        ],
+        "kode": [
+          "P1001",
+          "P1002",
+          "P1003",
+          "",
+          "",
+          ""
+        ],
+        "nomor_kode": 1004
+      }
+    },
+    {
+      "name": "B_A_tie_and_fallback",
+      "result": "PASS",
+      "purpose": "Paket yang muat B/A memilih B lebih dahulu lalu A ketika B penuh.",
+      "elapsed_seconds": 3.6e-05,
+      "inputs": [
+        "1",
+        "20",
+        "40",
+        "45",
+        "Ana",
+        "081234",
+        "y",
+        "1",
+        "20",
+        "40",
+        "45",
+        "Ana",
+        "081234",
+        "y",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 20\nLebar paket (bulat 1-60 cm): 40\nTinggi paket (bulat 1-60 cm): 45\nLoker terpilih: L05 | Tipe: B\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L05.\nNotifikasi simulasi: kode ambil P1001\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 20\nLebar paket (bulat 1-60 cm): 40\nTinggi paket (bulat 1-60 cm): 45\nLoker terpilih: L06 | Tipe: A\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L06.\nNotifikasi simulasi: kode ambil P1002\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Terisi",
+          "Terisi"
+        ],
+        "nama": [
+          "",
+          "",
+          "",
+          "",
+          "Ana",
+          "Ana"
+        ],
+        "telepon": [
+          "",
+          "",
+          "",
+          "",
+          "081234",
+          "081234"
+        ],
+        "kode": [
+          "",
+          "",
+          "",
+          "",
+          "P1001",
+          "P1002"
+        ],
+        "nomor_kode": 1003
+      }
+    },
+    {
+      "name": "invalid_menu",
+      "result": "PASS",
+      "purpose": "Menu tidak valid diulang dan pilihan keluar menghentikan program.",
+      "elapsed_seconds": 1.7e-05,
+      "inputs": [
+        "foo",
+        "0",
+        "",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): foo\nMenu tidak valid. Pilih angka 1 sampai 4.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 0\nMenu tidak valid. Pilih angka 1 sampai 4.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): \nMenu tidak valid. Pilih angka 1 sampai 4.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong"
+        ],
+        "nama": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "telepon": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "kode": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "nomor_kode": 1001
+      }
+    },
+    {
+      "name": "mixed_status",
+      "result": "PASS",
+      "purpose": "Status dan hitungan setiap tipe konsisten setelah titip dan ambil campuran.",
+      "elapsed_seconds": 7e-05,
+      "inputs": [
+        "1",
+        "20",
+        "20",
+        "20",
+        "Ana",
+        "081234",
+        "y",
+        "1",
+        "30",
+        "30",
+        "45",
+        "Ana",
+        "081234",
+        "y",
+        "1",
+        "30",
+        "40",
+        "45",
+        "Ana",
+        "081234",
+        "y",
+        "2",
+        "P1002",
+        "y",
+        "3",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 20\nLebar paket (bulat 1-60 cm): 20\nTinggi paket (bulat 1-60 cm): 20\nLoker terpilih: L01 | Tipe: D\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L01.\nNotifikasi simulasi: kode ambil P1001\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 30\nLebar paket (bulat 1-60 cm): 30\nTinggi paket (bulat 1-60 cm): 45\nLoker terpilih: L03 | Tipe: C\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L03.\nNotifikasi simulasi: kode ambil P1002\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 30\nLebar paket (bulat 1-60 cm): 40\nTinggi paket (bulat 1-60 cm): 45\nLoker terpilih: L05 | Tipe: B\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L05.\nNotifikasi simulasi: kode ambil P1003\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 2\nMasukkan kode ambil (contoh P1001): P1002\nKonfirmasi pengambilan paket? (y/t): y\nPaket diambil. L03 kosong.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 3\n\nKETERSEDIAAN LOKER\nID | Tipe | H x V x D (cm) | Status\nL01 | D | 30 x 20 x 45 | Terisi\nL02 | D | 30 x 20 x 45 | Kosong\nL03 | C | 30 x 30 x 45 | Kosong\nL04 | C | 30 x 30 x 45 | Kosong\nL05 | B | 30 x 40 x 45 | Terisi\nL06 | A | 20 x 60 x 45 | Kosong\nTotal kosong: 4\nTotal terisi: 2\nKosong D: 1 | C: 2 | B: 0 | A: 1\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Terisi",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Terisi",
+          "Kosong"
+        ],
+        "nama": [
+          "Ana",
+          "",
+          "",
+          "",
+          "Ana",
+          ""
+        ],
+        "telepon": [
+          "081234",
+          "",
+          "",
+          "",
+          "081234",
+          ""
+        ],
+        "kode": [
+          "P1001",
+          "",
+          "",
+          "",
+          "P1003",
+          ""
+        ],
+        "nomor_kode": 1004
+      }
+    },
+    {
+      "name": "independent_packages",
+      "result": "PASS",
+      "purpose": "Mengambil paket kedua tidak mengubah data paket pertama.",
+      "elapsed_seconds": 3.7e-05,
+      "inputs": [
+        "1",
+        "10",
+        "10",
+        "10",
+        "Ana",
+        "081234",
+        "y",
+        "1",
+        "10",
+        "10",
+        "10",
+        "Budi",
+        "081234",
+        "y",
+        "2",
+        "P1002",
+        "y",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 10\nLebar paket (bulat 1-60 cm): 10\nTinggi paket (bulat 1-60 cm): 10\nLoker terpilih: L01 | Tipe: D\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L01.\nNotifikasi simulasi: kode ambil P1001\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 10\nLebar paket (bulat 1-60 cm): 10\nTinggi paket (bulat 1-60 cm): 10\nLoker terpilih: L02 | Tipe: D\nNama penerima: Budi\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L02.\nNotifikasi simulasi: kode ambil P1002\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 2\nMasukkan kode ambil (contoh P1001): P1002\nKonfirmasi pengambilan paket? (y/t): y\nPaket diambil. L02 kosong.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Terisi",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong"
+        ],
+        "nama": [
+          "Ana",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "telepon": [
+          "081234",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "kode": [
+          "P1001",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "nomor_kode": 1003
+      }
+    },
+    {
+      "name": "rotation_B_1",
+      "result": "PASS",
+      "purpose": "Rotasi (30, 40, 45) tetap memilih tipe B.",
+      "elapsed_seconds": 5.2e-05,
+      "inputs": [
+        "1",
+        "30",
+        "40",
+        "45",
+        "Ana",
+        "081234",
+        "y",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 30\nLebar paket (bulat 1-60 cm): 40\nTinggi paket (bulat 1-60 cm): 45\nLoker terpilih: L05 | Tipe: B\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L05.\nNotifikasi simulasi: kode ambil P1001\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Terisi",
+          "Kosong"
+        ],
+        "nama": [
+          "",
+          "",
+          "",
+          "",
+          "Ana",
+          ""
+        ],
+        "telepon": [
+          "",
+          "",
+          "",
+          "",
+          "081234",
+          ""
+        ],
+        "kode": [
+          "",
+          "",
+          "",
+          "",
+          "P1001",
+          ""
+        ],
+        "nomor_kode": 1002
+      }
+    },
+    {
+      "name": "rotation_B_2",
+      "result": "PASS",
+      "purpose": "Rotasi (30, 45, 40) tetap memilih tipe B.",
+      "elapsed_seconds": 3e-05,
+      "inputs": [
+        "1",
+        "30",
+        "45",
+        "40",
+        "Ana",
+        "081234",
+        "y",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 30\nLebar paket (bulat 1-60 cm): 45\nTinggi paket (bulat 1-60 cm): 40\nLoker terpilih: L05 | Tipe: B\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L05.\nNotifikasi simulasi: kode ambil P1001\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Terisi",
+          "Kosong"
+        ],
+        "nama": [
+          "",
+          "",
+          "",
+          "",
+          "Ana",
+          ""
+        ],
+        "telepon": [
+          "",
+          "",
+          "",
+          "",
+          "081234",
+          ""
+        ],
+        "kode": [
+          "",
+          "",
+          "",
+          "",
+          "P1001",
+          ""
+        ],
+        "nomor_kode": 1002
+      }
+    },
+    {
+      "name": "rotation_B_3",
+      "result": "PASS",
+      "purpose": "Rotasi (40, 30, 45) tetap memilih tipe B.",
+      "elapsed_seconds": 2.5e-05,
+      "inputs": [
+        "1",
+        "40",
+        "30",
+        "45",
+        "Ana",
+        "081234",
+        "y",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 40\nLebar paket (bulat 1-60 cm): 30\nTinggi paket (bulat 1-60 cm): 45\nLoker terpilih: L05 | Tipe: B\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L05.\nNotifikasi simulasi: kode ambil P1001\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Terisi",
+          "Kosong"
+        ],
+        "nama": [
+          "",
+          "",
+          "",
+          "",
+          "Ana",
+          ""
+        ],
+        "telepon": [
+          "",
+          "",
+          "",
+          "",
+          "081234",
+          ""
+        ],
+        "kode": [
+          "",
+          "",
+          "",
+          "",
+          "P1001",
+          ""
+        ],
+        "nomor_kode": 1002
+      }
+    },
+    {
+      "name": "rotation_B_4",
+      "result": "PASS",
+      "purpose": "Rotasi (40, 45, 30) tetap memilih tipe B.",
+      "elapsed_seconds": 2.4e-05,
+      "inputs": [
+        "1",
+        "40",
+        "45",
+        "30",
+        "Ana",
+        "081234",
+        "y",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 40\nLebar paket (bulat 1-60 cm): 45\nTinggi paket (bulat 1-60 cm): 30\nLoker terpilih: L05 | Tipe: B\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L05.\nNotifikasi simulasi: kode ambil P1001\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Terisi",
+          "Kosong"
+        ],
+        "nama": [
+          "",
+          "",
+          "",
+          "",
+          "Ana",
+          ""
+        ],
+        "telepon": [
+          "",
+          "",
+          "",
+          "",
+          "081234",
+          ""
+        ],
+        "kode": [
+          "",
+          "",
+          "",
+          "",
+          "P1001",
+          ""
+        ],
+        "nomor_kode": 1002
+      }
+    },
+    {
+      "name": "rotation_B_5",
+      "result": "PASS",
+      "purpose": "Rotasi (45, 30, 40) tetap memilih tipe B.",
+      "elapsed_seconds": 2.3e-05,
+      "inputs": [
+        "1",
+        "45",
+        "30",
+        "40",
+        "Ana",
+        "081234",
+        "y",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 45\nLebar paket (bulat 1-60 cm): 30\nTinggi paket (bulat 1-60 cm): 40\nLoker terpilih: L05 | Tipe: B\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L05.\nNotifikasi simulasi: kode ambil P1001\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Terisi",
+          "Kosong"
+        ],
+        "nama": [
+          "",
+          "",
+          "",
+          "",
+          "Ana",
+          ""
+        ],
+        "telepon": [
+          "",
+          "",
+          "",
+          "",
+          "081234",
+          ""
+        ],
+        "kode": [
+          "",
+          "",
+          "",
+          "",
+          "P1001",
+          ""
+        ],
+        "nomor_kode": 1002
+      }
+    },
+    {
+      "name": "rotation_B_6",
+      "result": "PASS",
+      "purpose": "Rotasi (45, 40, 30) tetap memilih tipe B.",
+      "elapsed_seconds": 2.3e-05,
+      "inputs": [
+        "1",
+        "45",
+        "40",
+        "30",
+        "Ana",
+        "081234",
+        "y",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 45\nLebar paket (bulat 1-60 cm): 40\nTinggi paket (bulat 1-60 cm): 30\nLoker terpilih: L05 | Tipe: B\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L05.\nNotifikasi simulasi: kode ambil P1001\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Terisi",
+          "Kosong"
+        ],
+        "nama": [
+          "",
+          "",
+          "",
+          "",
+          "Ana",
+          ""
+        ],
+        "telepon": [
+          "",
+          "",
+          "",
+          "",
+          "081234",
+          ""
+        ],
+        "kode": [
+          "",
+          "",
+          "",
+          "",
+          "P1001",
+          ""
+        ],
+        "nomor_kode": 1002
+      }
+    },
+    {
+      "name": "rotation_A_1",
+      "result": "PASS",
+      "purpose": "Rotasi (20, 60, 45) tetap memilih tipe A.",
+      "elapsed_seconds": 3e-05,
+      "inputs": [
+        "1",
+        "20",
+        "60",
+        "45",
+        "Ana",
+        "081234",
+        "y",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 20\nLebar paket (bulat 1-60 cm): 60\nTinggi paket (bulat 1-60 cm): 45\nLoker terpilih: L06 | Tipe: A\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L06.\nNotifikasi simulasi: kode ambil P1001\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Terisi"
+        ],
+        "nama": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "Ana"
+        ],
+        "telepon": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "081234"
+        ],
+        "kode": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "P1001"
+        ],
+        "nomor_kode": 1002
+      }
+    },
+    {
+      "name": "rotation_A_2",
+      "result": "PASS",
+      "purpose": "Rotasi (20, 45, 60) tetap memilih tipe A.",
+      "elapsed_seconds": 2.3e-05,
+      "inputs": [
+        "1",
+        "20",
+        "45",
+        "60",
+        "Ana",
+        "081234",
+        "y",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 20\nLebar paket (bulat 1-60 cm): 45\nTinggi paket (bulat 1-60 cm): 60\nLoker terpilih: L06 | Tipe: A\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L06.\nNotifikasi simulasi: kode ambil P1001\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Terisi"
+        ],
+        "nama": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "Ana"
+        ],
+        "telepon": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "081234"
+        ],
+        "kode": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "P1001"
+        ],
+        "nomor_kode": 1002
+      }
+    },
+    {
+      "name": "rotation_A_3",
+      "result": "PASS",
+      "purpose": "Rotasi (60, 20, 45) tetap memilih tipe A.",
+      "elapsed_seconds": 0.000163,
+      "inputs": [
+        "1",
+        "60",
+        "20",
+        "45",
+        "Ana",
+        "081234",
+        "y",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 60\nLebar paket (bulat 1-60 cm): 20\nTinggi paket (bulat 1-60 cm): 45\nLoker terpilih: L06 | Tipe: A\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L06.\nNotifikasi simulasi: kode ambil P1001\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Terisi"
+        ],
+        "nama": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "Ana"
+        ],
+        "telepon": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "081234"
+        ],
+        "kode": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "P1001"
+        ],
+        "nomor_kode": 1002
+      }
+    },
+    {
+      "name": "rotation_A_4",
+      "result": "PASS",
+      "purpose": "Rotasi (60, 45, 20) tetap memilih tipe A.",
+      "elapsed_seconds": 4e-05,
+      "inputs": [
+        "1",
+        "60",
+        "45",
+        "20",
+        "Ana",
+        "081234",
+        "y",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 60\nLebar paket (bulat 1-60 cm): 45\nTinggi paket (bulat 1-60 cm): 20\nLoker terpilih: L06 | Tipe: A\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L06.\nNotifikasi simulasi: kode ambil P1001\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Terisi"
+        ],
+        "nama": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "Ana"
+        ],
+        "telepon": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "081234"
+        ],
+        "kode": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "P1001"
+        ],
+        "nomor_kode": 1002
+      }
+    },
+    {
+      "name": "rotation_A_5",
+      "result": "PASS",
+      "purpose": "Rotasi (45, 20, 60) tetap memilih tipe A.",
+      "elapsed_seconds": 4.7e-05,
+      "inputs": [
+        "1",
+        "45",
+        "20",
+        "60",
+        "Ana",
+        "081234",
+        "y",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 45\nLebar paket (bulat 1-60 cm): 20\nTinggi paket (bulat 1-60 cm): 60\nLoker terpilih: L06 | Tipe: A\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L06.\nNotifikasi simulasi: kode ambil P1001\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Terisi"
+        ],
+        "nama": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "Ana"
+        ],
+        "telepon": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "081234"
+        ],
+        "kode": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "P1001"
+        ],
+        "nomor_kode": 1002
+      }
+    },
+    {
+      "name": "rotation_A_6",
+      "result": "PASS",
+      "purpose": "Rotasi (45, 60, 20) tetap memilih tipe A.",
+      "elapsed_seconds": 2.7e-05,
+      "inputs": [
+        "1",
+        "45",
+        "60",
+        "20",
+        "Ana",
+        "081234",
+        "y",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 45\nLebar paket (bulat 1-60 cm): 60\nTinggi paket (bulat 1-60 cm): 20\nLoker terpilih: L06 | Tipe: A\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L06.\nNotifikasi simulasi: kode ambil P1001\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Terisi"
+        ],
+        "nama": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "Ana"
+        ],
+        "telepon": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "081234"
+        ],
+        "kode": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "P1001"
+        ],
+        "nomor_kode": 1002
+      }
+    },
+    {
+      "name": "dimension_prompts_match_inventory",
+      "result": "PASS",
+      "purpose": "Ketiga prompt menyebut 1-60 cm dan paket 60 x 45 x 20 tetap masuk A lewat rotasi.",
+      "elapsed_seconds": 2.4e-05,
+      "inputs": [
+        "1",
+        "60",
+        "45",
+        "20",
+        "Ana",
+        "081234",
+        "y",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 60\nLebar paket (bulat 1-60 cm): 45\nTinggi paket (bulat 1-60 cm): 20\nLoker terpilih: L06 | Tipe: A\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L06.\nNotifikasi simulasi: kode ambil P1001\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Terisi"
+        ],
+        "nama": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "Ana"
+        ],
+        "telepon": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "081234"
+        ],
+        "kode": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "P1001"
+        ],
+        "nomor_kode": 1002
+      }
+    },
+    {
+      "name": "over_limit_61_panjang",
+      "result": "PASS",
+      "purpose": "Panjang 61 cm ditolak dan diulang pada dimensi yang sama; batal tidak mengubah data.",
+      "elapsed_seconds": 2.5e-05,
+      "inputs": [
+        "1",
+        "61",
+        "20",
+        "20",
+        "20",
+        "Ana",
+        "081234",
+        "t",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 61\nUkuran harus bilangan bulat 1-60 cm.\nPanjang paket (bulat 1-60 cm): 20\nLebar paket (bulat 1-60 cm): 20\nTinggi paket (bulat 1-60 cm): 20\nLoker terpilih: L01 | Tipe: D\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): t\nPenitipan dibatalkan. Data loker tidak berubah.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong"
+        ],
+        "nama": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "telepon": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "kode": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "nomor_kode": 1001
+      }
+    },
+    {
+      "name": "over_limit_61_lebar",
+      "result": "PASS",
+      "purpose": "Lebar 61 cm ditolak dan diulang pada dimensi yang sama; batal tidak mengubah data.",
+      "elapsed_seconds": 2.4e-05,
+      "inputs": [
+        "1",
+        "20",
+        "61",
+        "20",
+        "20",
+        "Ana",
+        "081234",
+        "t",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 20\nLebar paket (bulat 1-60 cm): 61\nUkuran harus bilangan bulat 1-60 cm.\nLebar paket (bulat 1-60 cm): 20\nTinggi paket (bulat 1-60 cm): 20\nLoker terpilih: L01 | Tipe: D\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): t\nPenitipan dibatalkan. Data loker tidak berubah.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong"
+        ],
+        "nama": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "telepon": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "kode": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "nomor_kode": 1001
+      }
+    },
+    {
+      "name": "over_limit_61_tinggi",
+      "result": "PASS",
+      "purpose": "Tinggi 61 cm ditolak dan diulang pada dimensi yang sama; batal tidak mengubah data.",
+      "elapsed_seconds": 2.4e-05,
+      "inputs": [
+        "1",
+        "20",
+        "20",
+        "61",
+        "20",
+        "Ana",
+        "081234",
+        "t",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 20\nLebar paket (bulat 1-60 cm): 20\nTinggi paket (bulat 1-60 cm): 61\nUkuran harus bilangan bulat 1-60 cm.\nTinggi paket (bulat 1-60 cm): 20\nLoker terpilih: L01 | Tipe: D\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): t\nPenitipan dibatalkan. Data loker tidak berubah.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong"
+        ],
+        "nama": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "telepon": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "kode": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "nomor_kode": 1001
+      }
+    },
+    {
+      "name": "over_limit_9999",
+      "result": "PASS",
+      "purpose": "Batas lama 9999 ditolak langsung pada input panjang; tidak ada transaksi tersimpan.",
+      "elapsed_seconds": 2.5e-05,
+      "inputs": [
+        "1",
+        "9999",
+        "20",
+        "20",
+        "20",
+        "Ana",
+        "081234",
+        "t",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 9999\nUkuran harus bilangan bulat 1-60 cm.\nPanjang paket (bulat 1-60 cm): 20\nLebar paket (bulat 1-60 cm): 20\nTinggi paket (bulat 1-60 cm): 20\nLoker terpilih: L01 | Tipe: D\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): t\nPenitipan dibatalkan. Data loker tidak berubah.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong"
+        ],
+        "nama": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "telepon": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "kode": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "nomor_kode": 1001
+      }
+    },
+    {
+      "name": "leading_zero_rotated_60",
+      "result": "PASS",
+      "purpose": "Nol di depan tidak mengubah nilai; 00060 tetap valid dan rotasi memilih A.",
+      "elapsed_seconds": 2.7e-05,
+      "inputs": [
+        "1",
+        "00060",
+        "00045",
+        "00020",
+        "Ana",
+        "081234",
+        "y",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 00060\nLebar paket (bulat 1-60 cm): 00045\nTinggi paket (bulat 1-60 cm): 00020\nLoker terpilih: L06 | Tipe: A\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L06.\nNotifikasi simulasi: kode ambil P1001\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Terisi"
+        ],
+        "nama": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "Ana"
+        ],
+        "telepon": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "081234"
+        ],
+        "kode": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "P1001"
+        ],
+        "nomor_kode": 1002
+      }
+    },
+    {
+      "name": "long_leading_zero_60",
+      "result": "PASS",
+      "purpose": "5.000 karakter dengan nol di depan dan nilai 60 diterima tanpa konversi string panjang.",
+      "elapsed_seconds": 0.001091,
+      "inputs": [
+        "1",
+        "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000060",
+        "20",
+        "45",
+        "Ana",
+        "081234",
+        "y",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000060\nLebar paket (bulat 1-60 cm): 20\nTinggi paket (bulat 1-60 cm): 45\nLoker terpilih: L06 | Tipe: A\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L06.\nNotifikasi simulasi: kode ambil P1001\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Terisi"
+        ],
+        "nama": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "Ana"
+        ],
+        "telepon": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "081234"
+        ],
+        "kode": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "P1001"
+        ],
+        "nomor_kode": 1002
+      }
+    },
+    {
+      "name": "zero_only_dimension",
+      "result": "PASS",
+      "purpose": "5.000 angka nol tetap bernilai nol dan ditolak; batas bawah 1 cm diterima.",
+      "elapsed_seconds": 0.00108,
+      "inputs": [
+        "1",
+        "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "1",
+        "1",
+        "1",
+        "Ana",
+        "081234",
+        "y",
+        "4"
+      ],
+      "output": "SIMULASI LOKER PAKET\nTerinspirasi PopBox; seluruh proses merupakan simulasi.\nAsumsi: 6 loker; satu loker menampung satu paket.\nUkuran dalam cm, rotasi sisi diperbolehkan.\nUrutan alokasi: D, D, C, C, B, A; B/A sama volume.\nPembayaran dan notifikasi hanya simulasi.\nData serta kode direset ketika program dimulai ulang.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 1\nPanjang paket (bulat 1-60 cm): 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000\nUkuran harus bilangan bulat 1-60 cm.\nPanjang paket (bulat 1-60 cm): 1\nLebar paket (bulat 1-60 cm): 1\nTinggi paket (bulat 1-60 cm): 1\nLoker terpilih: L01 | Tipe: D\nNama penerima: Ana\nTelepon penerima: 081234\nPembayaran simulasi berhasil? (y/t): y\nPaket tersimpan di L01.\nNotifikasi simulasi: kode ambil P1001\nCatat kode ini; tidak ada pesan sungguhan dikirim.\n\nMENU UTAMA\n1. Titip/Kirim paket\n2. Ambil paket\n3. Ketersediaan loker\n4. Keluar\nPilih menu (1-4): 4\nSimulasi selesai. Data tidak disimpan permanen.\n",
+      "final_state": {
+        "status": [
+          "Terisi",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong",
+          "Kosong"
+        ],
+        "nama": [
+          "Ana",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "telepon": [
+          "081234",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "kode": [
+          "P1001",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "nomor_kode": 1002
+      }
+    }
+  ],
+  "limitations": [
+    "Automated tests use scripted terminal input; not a user usability study.",
+    "Geometry models rectangular boxes with six axis-aligned rotations.",
+    "Inventory, dimensions, and counts are simulation assumptions.",
+    "No physical door, sensor, payment, notification, or persistence was tested.",
+    "Code uniqueness is guaranteed within one session; restarting resets data."
+  ]
+}
