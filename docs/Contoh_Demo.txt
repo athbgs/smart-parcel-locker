@@ -1,0 +1,130 @@
+CONTOH DEMO SMART LOCKER
+Rekaman terminal nyata; masukan yang diketik tampil melalui echo terminal.
+Tanggal: 19 Oktober 2026. Sesi dimulai dengan seluruh loker kosong.
+Perintah: python3 WI1102_ProjekI_31_12.py
+Hasil pemeriksaan otomatis: LULUS. Program selesai dengan exit code 0.
+SHA-256 sumber: bc986a4a9cf8564d3b2ed7a305c99e4854f5eb2dd9b54e5a72a665ccf521cb21
+
+--- MULAI REKAMAN TERMINAL ---
+SIMULASI LOKER PAKET
+Terinspirasi PopBox; seluruh proses merupakan simulasi.
+Asumsi: 6 loker; satu loker menampung satu paket.
+Ukuran dalam cm, rotasi sisi diperbolehkan.
+Urutan alokasi: D, D, C, C, B, A; B/A sama volume.
+Pembayaran dan notifikasi hanya simulasi.
+Data serta kode direset ketika program dimulai ulang.
+
+MENU UTAMA
+1. Titip/Kirim paket
+2. Ambil paket
+3. Ketersediaan loker
+4. Keluar
+Pilih menu (1-4): 3
+
+KETERSEDIAAN LOKER
+ID | Tipe | H x V x D (cm) | Status
+L01 | D | 30 x 20 x 45 | Kosong
+L02 | D | 30 x 20 x 45 | Kosong
+L03 | C | 30 x 30 x 45 | Kosong
+L04 | C | 30 x 30 x 45 | Kosong
+L05 | B | 30 x 40 x 45 | Kosong
+L06 | A | 20 x 60 x 45 | Kosong
+Total kosong: 6
+Total terisi: 0
+Kosong D: 2 | C: 2 | B: 1 | A: 1
+
+MENU UTAMA
+1. Titip/Kirim paket
+2. Ambil paket
+3. Ketersediaan loker
+4. Keluar
+Pilih menu (1-4): 1
+Panjang paket (bulat 1-60 cm): 60
+Lebar paket (bulat 1-60 cm): 45
+Tinggi paket (bulat 1-60 cm): 20
+Loker terpilih: L06 | Tipe: A
+Nama penerima: Ana
+Telepon penerima: 081234
+Pembayaran simulasi berhasil? (y/t): y
+Paket tersimpan di L06.
+Notifikasi simulasi: kode ambil P1001
+Catat kode ini; tidak ada pesan sungguhan dikirim.
+
+MENU UTAMA
+1. Titip/Kirim paket
+2. Ambil paket
+3. Ketersediaan loker
+4. Keluar
+Pilih menu (1-4): 1
+Panjang paket (bulat 1-60 cm): 30
+Lebar paket (bulat 1-60 cm): 20
+Tinggi paket (bulat 1-60 cm): 45
+Loker terpilih: L01 | Tipe: D
+Nama penerima: Budi
+Telepon penerima: 081235
+Pembayaran simulasi berhasil? (y/t): y
+Paket tersimpan di L01.
+Notifikasi simulasi: kode ambil P1002
+Catat kode ini; tidak ada pesan sungguhan dikirim.
+
+MENU UTAMA
+1. Titip/Kirim paket
+2. Ambil paket
+3. Ketersediaan loker
+4. Keluar
+Pilih menu (1-4): 2
+Masukkan kode ambil (contoh P1001): SALAH
+Kode tidak ditemukan atau sudah digunakan.
+
+MENU UTAMA
+1. Titip/Kirim paket
+2. Ambil paket
+3. Ketersediaan loker
+4. Keluar
+Pilih menu (1-4): 2
+Masukkan kode ambil (contoh P1001): P1001
+Konfirmasi pengambilan paket? (y/t): y
+Paket diambil. L06 kosong.
+
+MENU UTAMA
+1. Titip/Kirim paket
+2. Ambil paket
+3. Ketersediaan loker
+4. Keluar
+Pilih menu (1-4): 2
+Masukkan kode ambil (contoh P1001): P1001
+Kode tidak ditemukan atau sudah digunakan.
+
+MENU UTAMA
+1. Titip/Kirim paket
+2. Ambil paket
+3. Ketersediaan loker
+4. Keluar
+Pilih menu (1-4): 3
+
+KETERSEDIAAN LOKER
+ID | Tipe | H x V x D (cm) | Status
+L01 | D | 30 x 20 x 45 | Terisi
+L02 | D | 30 x 20 x 45 | Kosong
+L03 | C | 30 x 30 x 45 | Kosong
+L04 | C | 30 x 30 x 45 | Kosong
+L05 | B | 30 x 40 x 45 | Kosong
+L06 | A | 20 x 60 x 45 | Kosong
+Total kosong: 5
+Total terisi: 1
+Kosong D: 1 | C: 2 | B: 1 | A: 1
+
+MENU UTAMA
+1. Titip/Kirim paket
+2. Ambil paket
+3. Ketersediaan loker
+4. Keluar
+Pilih menu (1-4): 4
+Simulasi selesai. Data tidak disimpan permanen.
+--- AKHIR REKAMAN TERMINAL ---
+
+Yang diperiksa: enam loker awal kosong; rotasi 60/45/20 memilih L06 A;
+paket 30/20/45 memilih L01 D; kode P1001 dan P1002 diterbitkan;
+kode salah ditolak; P1001 mengosongkan L06; P1001 bekas ditolak;
+status akhir hanya L01 terisi (5 kosong, 1 terisi); program keluar normal.
+Pemeriksaan tambahan memastikan berkas sumber tidak berubah.

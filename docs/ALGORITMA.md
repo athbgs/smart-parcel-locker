@@ -15,7 +15,7 @@ Pada [baris 17–27](../WI1102_ProjekI_31_12.py#L17-L27), enam loker diwakili ol
 | 4 | L05 | B | 30 × 40 × 45 |
 | 5 | L06 | A | 20 × 60 × 45 |
 
-Awalnya semua `status` bernilai `Kosong`, sedangkan `nama`, `telepon`, dan `kode` berisi string kosong. `nomor_kode` dimulai dari 1001. Daftar dimensi paket dan data penerima sementara dibuat kembali ketika menu titip dipilih.
+Awalnya semua `status` bernilai `Kosong`, sedangkan `nama`, `telepon`, dan `kode` berisi string kosong. `nomor_kode` dimulai dari 1001. Daftar dimensi paket dibuat kembali ketika menu titip dipilih; data penerima sementara dibuat setelah loker yang sesuai ditemukan.
 
 Aturan konsistensi yang dipertahankan:
 

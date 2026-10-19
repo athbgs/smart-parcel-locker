@@ -1,0 +1,579 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2930" height="2680" viewBox="0 0 2930 2680">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L9,4.5 L0,9 Z" fill="#172B3A"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<text x="60" y="48.0" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="bold" text-anchor="start" dominant-baseline="middle" fill="#172B3A">
+<tspan x="60" y="48.0">FLOWCHART GABUNGAN SMART PARCEL LOCKER</tspan>
+</text>
+<text x="60" y="91.0" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="normal" text-anchor="start" dominant-baseline="middle" fill="#476377">
+<tspan x="60" y="91.0">Sesuai program final WI1102 · 6 loker · array paralel · input 1–60 cm · 6 orientasi paket</tspan>
+</text>
+<rect x="60" y="135" width="500" height="2330" fill="white" stroke="#C8D4DD" stroke-width="1.5"/>
+<rect x="60" y="135" width="500" height="66" fill="#163D5C"/>
+<text x="310.0" y="160.0" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="white">
+<tspan x="310.0" y="160.0">MENU UTAMA</tspan>
+</text>
+<text x="310.0" y="185.0" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="white">
+<tspan x="310.0" y="185.0">Inisialisasi dan pemilihan layanan</tspan>
+</text>
+<rect x="590" y="135" width="920" height="2330" fill="white" stroke="#C8D4DD" stroke-width="1.5"/>
+<rect x="590" y="135" width="920" height="66" fill="#163D5C"/>
+<text x="1050.0" y="160.0" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="white">
+<tspan x="1050.0" y="160.0">TITIP / KIRIM</tspan>
+</text>
+<text x="1050.0" y="185.0" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="white">
+<tspan x="1050.0" y="185.0">Validasi → alokasi → data penerima → konfirmasi</tspan>
+</text>
+<rect x="1540" y="135" width="750" height="2330" fill="white" stroke="#C8D4DD" stroke-width="1.5"/>
+<rect x="1540" y="135" width="750" height="66" fill="#163D5C"/>
+<text x="1915.0" y="160.0" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="white">
+<tspan x="1915.0" y="160.0">AMBIL PAKET</tspan>
+</text>
+<text x="1915.0" y="185.0" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="white">
+<tspan x="1915.0" y="185.0">Pencarian kode → konfirmasi → reset data</tspan>
+</text>
+<rect x="2320" y="135" width="550" height="2330" fill="white" stroke="#C8D4DD" stroke-width="1.5"/>
+<rect x="2320" y="135" width="550" height="66" fill="#163D5C"/>
+<text x="2595.0" y="160.0" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="white">
+<tspan x="2595.0" y="160.0">KETERSEDIAAN</tspan>
+</text>
+<text x="2595.0" y="185.0" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="white">
+<tspan x="2595.0" y="185.0">Status enam loker dan ringkasan kapasitas</tspan>
+</text>
+<ellipse cx="310" cy="265" rx="105.0" ry="32.5" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="310" y="265.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="310" y="265.0">Mulai</tspan>
+</text>
+<rect x="90.0" y="332.5" width="440" height="175" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="310" y="370.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="310" y="370.0">Inisialisasi 9 array untuk 6 loker:</tspan>
+<tspan x="310" y="395.0">id_loker, jenis, sisi_h, sisi_v, sisi_d,</tspan>
+<tspan x="310" y="420.0">status, nama, telepon, kode.</tspan>
+<tspan x="310" y="445.0">Status = Kosong; data transaksi = &quot;&quot;.</tspan>
+<tspan x="310" y="470.0">nomor_kode = 1001.</tspan>
+</text>
+<rect x="90.0" y="535.0" width="440" height="110" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="310" y="565.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="310" y="565.0">Periksa ketiga sisi semua loker;</tspan>
+<tspan x="310" y="590.0">batas_dimensi = sisi terbesar</tspan>
+<tspan x="310" y="615.0">(60 cm pada data simulasi).</tspan>
+</text>
+<circle cx="120" cy="680" r="27.0" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="120" y="680.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="120" y="680.0">M</tspan>
+</text>
+<polygon points="114.0,710.0 530.0,710.0 506.0,830.0 90.0,830.0" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="310" y="743.75" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="310" y="743.75">Tampilkan menu; input pilihan:</tspan>
+<tspan x="310" y="770.0">1 Titip/Kirim · 2 Ambil</tspan>
+<tspan x="310" y="796.25">3 Ketersediaan · 4 Keluar</tspan>
+</text>
+<polygon points="310,900.0 450.0,955 310,1010.0 170.0,955" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="310" y="955.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="310" y="955.0">Pilihan = 1?</tspan>
+</text>
+<polygon points="310,1105.0 450.0,1160 310,1215.0 170.0,1160" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="310" y="1160.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="310" y="1160.0">Pilihan = 2?</tspan>
+</text>
+<polygon points="310,1310.0 450.0,1365 310,1420.0 170.0,1365" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="310" y="1365.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="310" y="1365.0">Pilihan = 3?</tspan>
+</text>
+<polygon points="310,1515.0 450.0,1570 310,1625.0 170.0,1570" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="310" y="1570.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="310" y="1570.0">Pilihan = 4?</tspan>
+</text>
+<circle cx="500" cy="955" r="27.0" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="500" y="955.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="500" y="955.0">T</tspan>
+</text>
+<circle cx="500" cy="1160" r="27.0" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="500" y="1160.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="500" y="1160.0">A</tspan>
+</text>
+<circle cx="500" cy="1365" r="27.0" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="500" y="1365.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="500" y="1365.0">K</tspan>
+</text>
+<ellipse cx="310" cy="1780" rx="220.0" ry="50.0" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="310" y="1767.5" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="310" y="1767.5">Selesai</tspan>
+<tspan x="310" y="1792.5">Data tidak disimpan permanen.</tspan>
+</text>
+<polygon points="114.0,1940.0 530.0,1940.0 506.0,2020.0 90.0,2020.0" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="310" y="1980.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="310" y="1980.0">Tampilkan &quot;Menu tidak valid&quot;.</tspan>
+</text>
+<circle cx="310" cy="2100" r="27.0" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="310" y="2100.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="310" y="2100.0">M</tspan>
+</text>
+<polyline points="310,297.5 310,332.5" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="310,507.5 310,535.0" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="310,645.0 310,710.0" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="93.0,680 75,680 75,770 102.0,770" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="310,830.0 310,900.0" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="450.0,955 473.0,955" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="449.0" y="916" width="32" height="28" fill="white"/>
+<text x="465" y="930.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="465" y="930.0">Ya</tspan>
+</text>
+<polyline points="310,1010.0 310,1105.0" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="307.5" y="1046" width="65" height="28" fill="white"/>
+<text x="340" y="1060.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="340" y="1060.0">Tidak</tspan>
+</text>
+<polyline points="450.0,1160 473.0,1160" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="449.0" y="1121" width="32" height="28" fill="white"/>
+<text x="465" y="1135.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="465" y="1135.0">Ya</tspan>
+</text>
+<polyline points="310,1215.0 310,1310.0" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="307.5" y="1248" width="65" height="28" fill="white"/>
+<text x="340" y="1262.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="340" y="1262.0">Tidak</tspan>
+</text>
+<polyline points="450.0,1365 473.0,1365" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="449.0" y="1326" width="32" height="28" fill="white"/>
+<text x="465" y="1340.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="465" y="1340.0">Ya</tspan>
+</text>
+<polyline points="310,1420.0 310,1515.0" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="307.5" y="1454" width="65" height="28" fill="white"/>
+<text x="340" y="1468.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="340" y="1468.0">Tidak</tspan>
+</text>
+<polyline points="310,1625.0 310,1730.0" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="319.0" y="1666" width="32" height="28" fill="white"/>
+<text x="335" y="1680.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="335" y="1680.0">Ya</tspan>
+</text>
+<polyline points="170.0,1570 85,1570 85,1980 102.0,1980" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="79.5" y="1616" width="65" height="28" fill="white"/>
+<text x="112" y="1630.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="112" y="1630.0">Tidak</tspan>
+</text>
+<polyline points="310,2020.0 310,2073.0" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<circle cx="1030" cy="245" r="27.0" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="1030" y="245.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1030" y="245.0">T</tspan>
+</text>
+<rect x="815.0" y="282.5" width="430" height="65" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="1030" y="315.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1030" y="315.0">dimensi = [0, 0, 0]; j = 0</tspan>
+</text>
+<polygon points="839.0,365.0 1245.0,365.0 1221.0,455.0 815.0,455.0" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="1030" y="396.875" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1030" y="396.875">Input dimensi[j]</tspan>
+<tspan x="1030" y="423.125">(panjang, lebar, lalu tinggi)</tspan>
+</text>
+<polygon points="1030,472.5 1195.0,530 1030,587.5 865.0,530" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="1030" y="517.5" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1030" y="517.5">Digit 0–9; nilai</tspan>
+<tspan x="1030" y="542.5">1–batas_dimensi?</tspan>
+</text>
+<polygon points="1289.0,480.0 1475.0,480.0 1451.0,580.0 1265.0,580.0" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="1370" y="507.5" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1370" y="507.5">Tampilkan pesan:</tspan>
+<tspan x="1370" y="530.0">&quot;Ukuran harus</tspan>
+<tspan x="1370" y="552.5">bulat 1–60 cm&quot;.</tspan>
+</text>
+<rect x="805.0" y="615.0" width="450" height="70" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="1030" y="650.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1030" y="650.0">Simpan nilai ke dimensi[j]; j = j + 1</tspan>
+</text>
+<polygon points="1030,702.5 1155.0,750 1030,797.5 905.0,750" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="1030" y="750.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1030" y="750.0">j &lt; 3?</tspan>
+</text>
+<rect x="795.0" y="830.0" width="470" height="130" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<path d="M807.0,830.0 V960.0" stroke="#172B3A" stroke-width="2.2"/>
+<path d="M1253.0,830.0 V960.0" stroke="#172B3A" stroke-width="2.2"/>
+<text x="1030" y="857.5" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1030" y="857.5">p, l, t = dimensi; indeks = −1.</tspan>
+<tspan x="1030" y="882.5">Untuk i = 0..5, uji 6 orientasi paket.</tspan>
+<tspan x="1030" y="907.5">Simpan indeks kosong pertama yang muat.</tspan>
+<tspan x="1030" y="932.5">Urutan loker: D, D, C, C, B, A.</tspan>
+</text>
+<polygon points="1030,970.0 1180.0,1020 1030,1070.0 880.0,1020" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="1030" y="1020.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1030" y="1020.0">indeks ≠ −1?</tspan>
+</text>
+<polygon points="1284.0,972.5 1480.0,972.5 1456.0,1057.5 1260.0,1057.5" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="1370" y="1003.75" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1370" y="1003.75">Tidak ada loker</tspan>
+<tspan x="1370" y="1026.25">kosong yang cukup.</tspan>
+</text>
+<circle cx="1370" cy="1110" r="27.0" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="1370" y="1110.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1370" y="1110.0">M</tspan>
+</text>
+<polygon points="829.0,1095.0 1255.0,1095.0 1231.0,1175.0 805.0,1175.0" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="1030" y="1135.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1030" y="1135.0">Tampilkan ID dan tipe loker terpilih.</tspan>
+</text>
+<rect x="815.0" y="1205.0" width="430" height="70" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="1030" y="1240.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1030" y="1240.0">data_baru = [&quot;&quot;, &quot;&quot;]; j = 0</tspan>
+</text>
+<polygon points="834.0,1300.0 1250.0,1300.0 1226.0,1390.0 810.0,1390.0" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="1030" y="1331.875" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1030" y="1331.875">Input data_baru[j]</tspan>
+<tspan x="1030" y="1358.125">(nama, lalu telepon penerima)</tspan>
+</text>
+<polygon points="1030,1402.5 1195.0,1460 1030,1517.5 865.0,1460" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="1030" y="1447.5" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1030" y="1447.5">Ada karakter selain</tspan>
+<tspan x="1030" y="1472.5">spasi atau tab?</tspan>
+</text>
+<polygon points="1289.0,1410.0 1475.0,1410.0 1451.0,1510.0 1265.0,1510.0" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="1370" y="1437.5" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1370" y="1437.5">Tampilkan pesan:</tspan>
+<tspan x="1370" y="1460.0">&quot;Isian tidak boleh</tspan>
+<tspan x="1370" y="1482.5">kosong / spasi&quot;.</tspan>
+</text>
+<rect x="815.0" y="1545.0" width="430" height="70" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="1030" y="1580.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1030" y="1580.0">Pertahankan isian; j = j + 1</tspan>
+</text>
+<polygon points="1030,1632.5 1155.0,1680 1030,1727.5 905.0,1680" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="1030" y="1680.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1030" y="1680.0">j &lt; 2?</tspan>
+</text>
+<polygon points="834.0,1760.0 1250.0,1760.0 1226.0,1840.0 810.0,1840.0" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="1030" y="1800.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1030" y="1800.0">Input pembayaran simulasi: y / t</tspan>
+</text>
+<polygon points="1030,1860.0 1195.0,1910 1030,1960.0 865.0,1910" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="1030" y="1910.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1030" y="1910.0">Jawaban y atau t?</tspan>
+</text>
+<polygon points="1289.0,1860.0 1475.0,1860.0 1451.0,1960.0 1265.0,1960.0" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="1370" y="1887.5" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1370" y="1887.5">Tampilkan pesan:</tspan>
+<tspan x="1370" y="1910.0">&quot;Jawaban harus</tspan>
+<tspan x="1370" y="1932.5">y atau t&quot;.</tspan>
+</text>
+<polygon points="1030,1975.0 1180.0,2025 1030,2075.0 880.0,2025" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="1030" y="2025.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1030" y="2025.0">Jawaban = y?</tspan>
+</text>
+<polygon points="1284.0,1985.0 1480.0,1985.0 1456.0,2065.0 1260.0,2065.0" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="1370" y="2013.75" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1370" y="2013.75">Batalkan penitipan;</tspan>
+<tspan x="1370" y="2036.25">data loker tetap.</tspan>
+</text>
+<circle cx="1370" cy="2120" r="27.0" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="1370" y="2120.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1370" y="2120.0">M</tspan>
+</text>
+<rect x="790.0" y="2122.5" width="480" height="135" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="1030" y="2140.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1030" y="2140.0">status[indeks] = &quot;Terisi&quot;;</tspan>
+<tspan x="1030" y="2165.0">nama[indeks] = data_baru[0];</tspan>
+<tspan x="1030" y="2190.0">telepon[indeks] = data_baru[1];</tspan>
+<tspan x="1030" y="2215.0">kode[indeks] = &quot;P&quot; + str(nomor_kode);</tspan>
+<tspan x="1030" y="2240.0">nomor_kode = nomor_kode + 1.</tspan>
+</text>
+<polygon points="814.0,2285.0 1270.0,2285.0 1246.0,2375.0 790.0,2375.0" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="1030" y="2317.5" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1030" y="2317.5">Tampilkan paket tersimpan dan kode ambil.</tspan>
+<tspan x="1030" y="2342.5">Notifikasi hanya simulasi.</tspan>
+</text>
+<circle cx="1030" cy="2420" r="27.0" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="1030" y="2420.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1030" y="2420.0">M</tspan>
+</text>
+<polyline points="1030,272.0 1030,282.5" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="1030,347.5 1030,365.0" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="1030,455.0 1030,472.5" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="1030,587.5 1030,615.0" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="1044.0" y="586" width="32" height="28" fill="white"/>
+<text x="1060" y="600.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1060" y="600.0">Ya</tspan>
+</text>
+<polyline points="1195.0,530 1277.0,530" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="1205.5" y="491" width="65" height="28" fill="white"/>
+<text x="1238" y="505.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1238" y="505.0">Tidak</tspan>
+</text>
+<polyline points="1463.0,530 1488,530 1488,410 1233.0,410" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="1030,685.0 1030,702.5" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="905.0,750 680,750 680,410 827.0,410" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="839.0" y="711" width="32" height="28" fill="white"/>
+<text x="855" y="725.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="855" y="725.0">Ya</tspan>
+</text>
+<polyline points="1030,797.5 1030,830.0" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="1037.5" y="806" width="65" height="28" fill="white"/>
+<text x="1070" y="820.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1070" y="820.0">Tidak</tspan>
+</text>
+<polyline points="1030,960.0 1030,970.0" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="1030,1070.0 1030,1095.0" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="1044.0" y="1066" width="32" height="28" fill="white"/>
+<text x="1060" y="1080.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1060" y="1080.0">Ya</tspan>
+</text>
+<polyline points="1180.0,1020 1272.0,1015" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="1197.5" y="976" width="65" height="28" fill="white"/>
+<text x="1230" y="990.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1230" y="990.0">Tidak</tspan>
+</text>
+<polyline points="1370,1057.5 1370,1083.0" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="1030,1175.0 1030,1205.0" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="1030,1275.0 1030,1300.0" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="1030,1390.0 1030,1402.5" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="1030,1517.5 1030,1545.0" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="1044.0" y="1516" width="32" height="28" fill="white"/>
+<text x="1060" y="1530.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1060" y="1530.0">Ya</tspan>
+</text>
+<polyline points="1195.0,1460 1277.0,1460" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="1205.5" y="1421" width="65" height="28" fill="white"/>
+<text x="1238" y="1435.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1238" y="1435.0">Tidak</tspan>
+</text>
+<polyline points="1463.0,1460 1488,1460 1488,1345 1238.0,1345" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="1030,1615.0 1030,1632.5" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="905.0,1680 680,1680 680,1345 822.0,1345" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="839.0" y="1641" width="32" height="28" fill="white"/>
+<text x="855" y="1655.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="855" y="1655.0">Ya</tspan>
+</text>
+<polyline points="1030,1727.5 1030,1760.0" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="1037.5" y="1726" width="65" height="28" fill="white"/>
+<text x="1070" y="1740.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1070" y="1740.0">Tidak</tspan>
+</text>
+<polyline points="1030,1840.0 1030,1860.0" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="1030,1960.0 1030,1975.0" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="1044.0" y="1954" width="32" height="28" fill="white"/>
+<text x="1060" y="1968.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1060" y="1968.0">Ya</tspan>
+</text>
+<polyline points="1195.0,1910 1277.0,1910" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="1205.5" y="1871" width="65" height="28" fill="white"/>
+<text x="1238" y="1885.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1238" y="1885.0">Tidak</tspan>
+</text>
+<polyline points="1463.0,1910 1488,1910 1488,1800 1238.0,1800" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="1030,2075.0 1030,2122.5" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="1044.0" y="2086" width="32" height="28" fill="white"/>
+<text x="1060" y="2100.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1060" y="2100.0">Ya</tspan>
+</text>
+<polyline points="1180.0,2025 1272.0,2025" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="1177.5" y="1981" width="109" height="28" fill="white"/>
+<text x="1232" y="1995.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1232" y="1995.0">Tidak / t</tspan>
+</text>
+<polyline points="1370,2065.0 1370,2093.0" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="1030,2257.5 1030,2285.0" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="1030,2375.0 1030,2393.0" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<circle cx="1845" cy="245" r="27.0" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="1845" y="245.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1845" y="245.0">A</tspan>
+</text>
+<rect x="1640.0" y="307.5" width="410" height="95" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<path d="M1652.0,307.5 V402.5" stroke="#172B3A" stroke-width="2.2"/>
+<path d="M2038.0,307.5 V402.5" stroke="#172B3A" stroke-width="2.2"/>
+<text x="1845" y="341.875" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1845" y="341.875">Hitung status Terisi</tspan>
+<tspan x="1845" y="368.125">dengan loop i = 0..5.</tspan>
+</text>
+<polygon points="1845,435.0 2000.0,490 1845,545.0 1690.0,490" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="1845" y="490.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1845" y="490.0">Ada paket terisi?</tspan>
+</text>
+<polygon points="2054.5,445.0 2265.5,445.0 2241.5,535.0 2030.5,535.0" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="2148" y="478.75" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="2148" y="478.75">Tampilkan &quot;Tidak ada</tspan>
+<tspan x="2148" y="501.25">paket tersimpan&quot;.</tspan>
+</text>
+<circle cx="2148" cy="600" r="27.0" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="2148" y="600.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="2148" y="600.0">M</tspan>
+</text>
+<polygon points="1664.0,620.0 2050.0,620.0 2026.0,700.0 1640.0,700.0" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="1845" y="660.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1845" y="660.0">Input kode pengambilan.</tspan>
+</text>
+<rect x="1625.0" y="740.0" width="440" height="120" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<path d="M1637.0,740.0 V860.0" stroke="#172B3A" stroke-width="2.2"/>
+<path d="M2053.0,740.0 V860.0" stroke="#172B3A" stroke-width="2.2"/>
+<text x="1845" y="775.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1845" y="775.0">indeks = −1; periksa i = 0..5.</tspan>
+<tspan x="1845" y="800.0">Cari status Terisi DAN kode yang sama.</tspan>
+<tspan x="1845" y="825.0">Simpan indeks jika ditemukan.</tspan>
+</text>
+<polygon points="1845,895.0 1995.0,950 1845,1005.0 1695.0,950" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="1845" y="950.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1845" y="950.0">indeks ≠ −1?</tspan>
+</text>
+<polygon points="2054.5,895.0 2265.5,895.0 2241.5,1005.0 2030.5,1005.0" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="2148" y="927.5" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="2148" y="927.5">Tampilkan &quot;Kode tidak</tspan>
+<tspan x="2148" y="950.0">ditemukan / sudah</tspan>
+<tspan x="2148" y="972.5">digunakan&quot;.</tspan>
+</text>
+<circle cx="2148" cy="1070" r="27.0" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="2148" y="1070.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="2148" y="1070.0">M</tspan>
+</text>
+<polygon points="1649.0,1105.0 2065.0,1105.0 2041.0,1195.0 1625.0,1195.0" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="1845" y="1150.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1845" y="1150.0">Input konfirmasi pengambilan: y / t</tspan>
+</text>
+<polygon points="1845,1237.5 2005.0,1290 1845,1342.5 1685.0,1290" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="1845" y="1290.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1845" y="1290.0">Jawaban y atau t?</tspan>
+</text>
+<polygon points="2062.0,1235.0 2258.0,1235.0 2234.0,1345.0 2038.0,1345.0" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="2148" y="1267.5" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="2148" y="1267.5">Tampilkan pesan:</tspan>
+<tspan x="2148" y="1290.0">&quot;Jawaban harus</tspan>
+<tspan x="2148" y="1312.5">y atau t&quot;.</tspan>
+</text>
+<polygon points="1845,1375.0 1995.0,1430 1845,1485.0 1695.0,1430" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="1845" y="1430.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1845" y="1430.0">Jawaban = y?</tspan>
+</text>
+<polygon points="2054.5,1385.0 2265.5,1385.0 2241.5,1475.0 2030.5,1475.0" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="2148" y="1418.75" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="2148" y="1418.75">Batalkan pengambilan;</tspan>
+<tspan x="2148" y="1441.25">data loker tetap.</tspan>
+</text>
+<circle cx="2148" cy="1540" r="27.0" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="2148" y="1540.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="2148" y="1540.0">M</tspan>
+</text>
+<rect x="1620.0" y="1547.5" width="450" height="125" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="1845" y="1585.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1845" y="1585.0">status[indeks] = &quot;Kosong&quot;;</tspan>
+<tspan x="1845" y="1610.0">nama[indeks] = &quot;&quot;;</tspan>
+<tspan x="1845" y="1635.0">telepon[indeks] = &quot;&quot;; kode[indeks] = &quot;&quot;. </tspan>
+</text>
+<polygon points="1649.0,1740.0 2065.0,1740.0 2041.0,1840.0 1625.0,1840.0" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="1845" y="1776.875" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1845" y="1776.875">Tampilkan &quot;Paket diambil&quot;</tspan>
+<tspan x="1845" y="1803.125">dan loker kembali kosong.</tspan>
+</text>
+<circle cx="1845" cy="1920" r="27.0" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="1845" y="1920.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1845" y="1920.0">M</tspan>
+</text>
+<polyline points="1845,272.0 1845,307.5" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="1845,402.5 1845,435.0" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="1845,545.0 1845,620.0" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="1859.0" y="566" width="32" height="28" fill="white"/>
+<text x="1875" y="580.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1875" y="580.0">Ya</tspan>
+</text>
+<polyline points="2000.0,490 2042.5,490" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="1982.5" y="451" width="65" height="28" fill="white"/>
+<text x="2015" y="465.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="2015" y="465.0">Tidak</tspan>
+</text>
+<polyline points="2148,535.0 2148,573.0" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="1845,700.0 1845,740.0" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="1845,860.0 1845,895.0" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="1845,1005.0 1845,1105.0" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="1859.0" y="1046" width="32" height="28" fill="white"/>
+<text x="1875" y="1060.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1875" y="1060.0">Ya</tspan>
+</text>
+<polyline points="1995.0,950 2042.5,950" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="1980.5" y="911" width="65" height="28" fill="white"/>
+<text x="2013" y="925.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="2013" y="925.0">Tidak</tspan>
+</text>
+<polyline points="2148,1005.0 2148,1043.0" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="1845,1195.0 1845,1237.5" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="1845,1342.5 1845,1375.0" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="1859.0" y="1346" width="32" height="28" fill="white"/>
+<text x="1875" y="1360.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1875" y="1360.0">Ya</tspan>
+</text>
+<polyline points="2005.0,1290 2050.0,1290" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="1982.5" y="1251" width="65" height="28" fill="white"/>
+<text x="2015" y="1265.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="2015" y="1265.0">Tidak</tspan>
+</text>
+<polyline points="2246.0,1290 2272,1290 2272,1150 2053.0,1150" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="1845,1485.0 1845,1547.5" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="1859.0" y="1503" width="32" height="28" fill="white"/>
+<text x="1875" y="1517.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="1875" y="1517.0">Ya</tspan>
+</text>
+<polyline points="1995.0,1430 2042.5,1430" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="1958.5" y="1386" width="109" height="28" fill="white"/>
+<text x="2013" y="1400.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="2013" y="1400.0">Tidak / t</tspan>
+</text>
+<polyline points="2148,1475.0 2148,1513.0" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="1845,1672.5 1845,1740.0" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="1845,1840.0 1845,1893.0" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<circle cx="2595" cy="245" r="27.0" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="2595" y="245.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="2595" y="245.0">K</tspan>
+</text>
+<rect x="2375.0" y="330.0" width="440" height="120" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="2595" y="363.75" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="2595" y="363.75">Nolkan penghitung:</tspan>
+<tspan x="2595" y="390.0">total kosong, total terisi,</tspan>
+<tspan x="2595" y="416.25">serta kosong A, B, C, D.</tspan>
+</text>
+<rect x="2365.0" y="560.0" width="460" height="180" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<path d="M2377.0,560.0 V740.0" stroke="#172B3A" stroke-width="2.2"/>
+<path d="M2813.0,560.0 V740.0" stroke="#172B3A" stroke-width="2.2"/>
+<text x="2595" y="597.5" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="2595" y="597.5">Untuk setiap i = 0..5:</tspan>
+<tspan x="2595" y="623.75">tampilkan ID, tipe, ukuran, status;</tspan>
+<tspan x="2595" y="650.0">hitung kosong atau terisi;</tspan>
+<tspan x="2595" y="676.25">jika kosong, tambahkan</tspan>
+<tspan x="2595" y="702.5">penghitung sesuai tipe loker.</tspan>
+</text>
+<polygon points="2389.0,865.0 2825.0,865.0 2801.0,995.0 2365.0,995.0" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="2595" y="903.75" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="normal" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="2595" y="903.75">Tampilkan total kosong dan terisi,</tspan>
+<tspan x="2595" y="930.0">serta jumlah kosong per tipe</tspan>
+<tspan x="2595" y="956.25">D, C, B, A.</tspan>
+</text>
+<circle cx="2595" cy="1090" r="27.0" fill="white" stroke="#172B3A" stroke-width="2.2"/>
+<text x="2595" y="1090.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="2595" y="1090.0">M</tspan>
+</text>
+<polyline points="2595,272.0 2595,330.0" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="2595,450.0 2595,560.0" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="2595,740.0 2595,865.0" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="2595,995.0 2595,1063.0" fill="none" stroke="#172B3A" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="2350" y="1300" width="490" height="520" rx="8" fill="#F2F6F9" stroke="#C8D4DD"/>
+<text x="2595" y="1340.0" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="#172B3A">
+<tspan x="2595" y="1340.0">CATATAN MODEL</tspan>
+</text>
+<text x="2375" y="1366.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="normal" text-anchor="start" dominant-baseline="middle" fill="#172B3A">
+<tspan x="2375" y="1366.0">Ukuran loker (cm):</tspan>
+<tspan x="2375" y="1398.0">D: 30 × 20 × 45 (2 unit)</tspan>
+<tspan x="2375" y="1430.0">C: 30 × 30 × 45 (2 unit)</tspan>
+<tspan x="2375" y="1462.0">B: 30 × 40 × 45 (1 unit)</tspan>
+<tspan x="2375" y="1494.0">A: 20 × 60 × 45 (1 unit)</tspan>
+</text>
+<text x="2375" y="1563.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" text-anchor="start" dominant-baseline="middle" fill="#172B3A">
+<tspan x="2375" y="1563.0">Enam orientasi = pertukaran sisi.</tspan>
+<tspan x="2375" y="1594.0">Batas 60 berlaku untuk setiap input;</tspan>
+<tspan x="2375" y="1625.0">paket masih harus lolos uji muat.</tspan>
+<tspan x="2375" y="1656.0">Nama / telepon hanya dicek tidak</tspan>
+<tspan x="2375" y="1687.0">kosong atau hanya spasi / tab.</tspan>
+</text>
+<path d="M60,2500 H2870" stroke="#C8D4DD" stroke-width="2"/>
+<text x="60" y="2535.0" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="bold" text-anchor="start" dominant-baseline="middle" fill="#172B3A">
+<tspan x="60" y="2535.0">CARA MEMBACA</tspan>
+</text>
+<text x="60" y="2580.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="normal" text-anchor="start" dominant-baseline="middle" fill="#172B3A">
+<tspan x="60" y="2580.0">Konektor berhuruf sama terhubung: T = Titip/Kirim, A = Ambil, K = Ketersediaan. Semua M kembali ke input menu utama.</tspan>
+</text>
+<text x="60" y="2620.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" text-anchor="start" dominant-baseline="middle" fill="#172B3A">
+<tspan x="60" y="2620.0">Kotak bergaris ganda merangkum loop; bukan pemanggilan fungsi Python. Ukuran tidak valid mengulang sisi yang sama; isian kosong mengulang data yang sama.</tspan>
+</text>
+</svg>
